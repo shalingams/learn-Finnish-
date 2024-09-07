@@ -14,6 +14,13 @@ export default defineConfig({
         v3_relativeSplatPath: true,
         v3_throwAbortReason: true,
       },
+      routes(defineRoutes) {
+        return defineRoutes((route) => {
+          route("/", "routes/home/index.tsx", { index: true });
+          route("numbers", "routes/numbers/index.tsx");
+          route("numbers/numbers", "routes/numbers/count.tsx");
+        });
+      },
     }),
     tsconfigPaths(),
   ],
