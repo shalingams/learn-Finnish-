@@ -1,15 +1,12 @@
 import { useState } from "react";
 
 export default function Count() {
-  // function Speak() {
-  //   // Create a SpeechSynthesisUtterance
-  //   const utterance = new SpeechSynthesisUtterance("aamupäivä");
+  // const speak = (text: string) => {
+  //   const utterance = new SpeechSynthesisUtterance(text);
 
-  //   // Select a voice
   //   const voices = speechSynthesis.getVoices();
-  //   utterance.voice = voices[1]; // Choose a specific voice
-  //   utterance.lang = "fi";
-  //   // Speak the text
+  //   utterance.voice = voices[1];
+  //   utterance.lang = "fin";
   //   speechSynthesis.speak(utterance);
   // }
 
@@ -54,6 +51,7 @@ export default function Count() {
 
   const changeLabel = (text: string) => {
     setTestLabel(text);
+    // speak(text);
   };
 
   return (
