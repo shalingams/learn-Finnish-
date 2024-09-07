@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaAnglesRight, FaAnglesLeft, FaHouse } from "react-icons/fa6";
 
 export default function Count() {
   // const speak = (text: string) => {
@@ -37,10 +38,22 @@ export default function Count() {
       { num: 19, text: "yhdeksäntoista" },
       { num: 20, text: "kaksikymmentä" },
     ],
+    [
+      { num: 21, text: "kaksikymmentäyksi" },
+      { num: 22, text: "kaksikymmentäkaksi" },
+      { num: 50, text: "viisikymmentä" },
+      { num: 100, text: "sata" },
+      { num: 101, text: "satayksi" },
+      { num: 125, text: "satakaksikymmentäviisi" },
+      { num: 200, text: "kaksisataa" },
+      { num: 500, text: "viisisataa" },
+      { num: 1000, text: "tuhat" },
+      { num: 1235, text: "tuhat kaksi sataa kolme kymmentä viisi" },
+    ],
   ];
 
-  function nextPage() {
-    setPage(page + 1);
+  function nextPage() {    
+    page == (collection.length - 1) ? setPage(page) : setPage(page + 1);
     setTestLabel("Select a Number");
   }
 
@@ -57,13 +70,13 @@ export default function Count() {
   return (
     <div className="flex flex-col bg-teal-200 w-full min-h-screen items-center p-10">
       <div className="flex">
-        <p className="text-black w-full text-2xl m-3">{textLabel}</p>
+        <p className="text-black w-full text-2xl m-3 flex-wrap">{textLabel}</p>
       </div>
       <div className="flex flex-col m-3 w-3/4 fixed bottom-12">
         <div className="flex flex-wrap justify-center items-center ">
           {collection[page].map((column, index) => (
             <button
-              className="flx p-5 bg-green-300 m-2 text-2xl w-16"
+              className="flx p-5 bg-green-300 m-1 text-1xl w-20"
               key={index}
               onClick={() => changeLabel(column.text)}
             >
@@ -73,10 +86,14 @@ export default function Count() {
         </div>
         <div className="flex justify-between items-end mt-10">
           <button className="flx p-5 bg-green-300 text-xl" onClick={prevPage}>
-            Prv
+            <FaAnglesLeft />
           </button>
+          <a href="/" className="flx p-5 bg-green-300 text-xl" onClick={prevPage}>
+            <FaHouse />
+          </a>
+
           <button className="flx p-5 bg-green-300 text-xl" onClick={nextPage}>
-            Next
+            {<FaAnglesRight />}
           </button>
         </div>
       </div>
