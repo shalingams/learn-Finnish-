@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { useState } from "react";
 import { FaAnglesRight, FaAnglesLeft, FaHouse } from "react-icons/fa6";
 
@@ -39,14 +40,14 @@ export default function Count() {
       { num: 20, text: "kaksikymmentä" },
     ],
     [
-      { num: 21, text: "kaksikymmentäyksi" },
-      { num: 22, text: "kaksikymmentäkaksi" },
-      { num: 50, text: "viisikymmentä" },
+      { num: 21, text: "kaksi kymmentä yksi" },
+      { num: 22, text: "kaksi kymmentä kaksi" },
+      { num: 50, text: "viisi kymmentä" },
       { num: 100, text: "sata" },
       { num: 101, text: "satayksi" },
-      { num: 125, text: "satakaksikymmentäviisi" },
-      { num: 200, text: "kaksisataa" },
-      { num: 500, text: "viisisataa" },
+      { num: 125, text: "sata kaksi kymmentä viisi" },
+      { num: 200, text: "kaksi sataa" },
+      { num: 500, text: "viisi sataa" },
       { num: 1000, text: "tuhat" },
       { num: 1235, text: "tuhat kaksi sataa kolme kymmentä viisi" },
     ],
@@ -88,9 +89,9 @@ export default function Count() {
           <button className="flx p-5 bg-green-300 text-xl" onClick={prevPage}>
             <FaAnglesLeft />
           </button>
-          <a href="/" className="flx p-5 bg-green-300 text-xl" onClick={prevPage}>
+          <Link to="/" className="flx p-5 bg-green-300 text-xl" onClick={prevPage}>
             <FaHouse />
-          </a>
+          </Link>
 
           <button className="flx p-5 bg-green-300 text-xl" onClick={nextPage}>
             {<FaAnglesRight />}

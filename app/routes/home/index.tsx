@@ -1,11 +1,12 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
+import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
     { title: "Learn Finnish" },
     {
       name: "description",
-      content: "Learn Finnish by Practising",
+      content: "Learn Finnish by Practicing",
     },
   ];
 };
@@ -20,20 +21,20 @@ export default function Index() {
         <ul className="m-4 pl-6 space-y-2">
           <li className="h-7 m-5 uppercase">Lets Learn</li>
           <li className="h-7 m-5">
-            <a
-              className="text-red-700 underline visited:text-purple-900"
-              href="/numbers"
+            <Link
+              className="text-blue-700 underline visited:text-purple-900"
+              to="/numbers"
             >
               Numbers
-            </a>
+            </Link>
           </li>
           <li className="h-7 m-5">
-            <a
+            <Link
               className="text-blue-700 underline visited:text-purple-900"
-              href="/words"
+              to="/words"
             >
               Words
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

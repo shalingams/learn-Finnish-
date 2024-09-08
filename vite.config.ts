@@ -19,6 +19,7 @@ export default defineConfig({
           route("/", "routes/home/index.tsx", { index: true });
           route("numbers", "routes/numbers/index.tsx");
           route("numbers/numbers", "routes/numbers/count.tsx");
+          route("numbers/practice", "routes/numbers/practice.tsx");
         });
       },
     }),
