@@ -11,7 +11,7 @@ export default function Practice() {
       </div>
       <div className="flex w-screen justify-center items-center">
         <Link
-          to="/numbers/practice?range=10"
+          to="/numbers/practice/level?range=10"
           className="bg-blue-400 uppercase p-5 rounded-lg w-3/4 justify-center items-center flex text-2xl"
         >
           1 - 10
@@ -27,7 +27,7 @@ export default function Practice() {
       </div>
       <div className="flex w-screen justify-center items-center">
         <Link
-          to="/numbers/practice?range=1000"
+          to="/numbers/practice/level?range=1000"
           className="bg-blue-400 uppercase p-5 rounded-lg w-3/4 justify-center items-center flex text-2xl"
         >
           1 - 1000
@@ -35,7 +35,7 @@ export default function Practice() {
       </div>
       <div className="flex w-screen justify-center items-center">
         <Link
-          to="/numbers/practice?range=9999"
+          to="/numbers/practice/level?range=9999"
           className="bg-blue-400 uppercase p-5 rounded-lg w-3/4 justify-center items-center flex text-2xl"
         >
           1 - 9999

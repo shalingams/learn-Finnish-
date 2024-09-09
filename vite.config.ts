@@ -20,6 +20,9 @@ export default defineConfig({
           route("numbers", "routes/numbers/index.tsx");
           route("numbers/numbers", "routes/numbers/count.tsx");
           route("numbers/practice", "routes/numbers/practice.tsx");
+          route("/numbers/practice/level", "routes/numbers/level.tsx");
+          route("words", "routes/words/index.tsx");
+          route("words/words", "routes/words/words.tsx");
         });
       },
     }),
